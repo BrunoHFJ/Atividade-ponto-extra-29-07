@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fofocas Fernandes - Cadastro</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div id="cabecalho1">
+
+        </div>
+
+        <div id="cabecalho2">
+            <img src="midia/logo.png" alt="Logo" id="imagemlogo">
+        </div>
+
+        <div id="cabecalho3">
+
+        </div>
+
+    </header> <!--Fim div cabecalho-->
+    
+    <br/>
+
+    <nav>
+    <div id="menu-titulo">
+        <h1>Índice</h1>
+    </div>
+
+    <div id="menu-lista">
+
+    <a href="index.html">Pagina Inicial</a></li> |
+    <a href="galeria.html" rel="prev">Galeria</a></li> |
+    <a href="cadastro.html">Cadastro</a></li>
+
+    </div>
+    </nav> <!-- Fim menu-->
+
+    <main>
+
+        <br/>
+
+        <h1>Realize seu cadastro:</h1>
+    
+        <br/>
+        
+        <form id="meuFormulario" onsubmit="return validarFormulario()">
+            <label for="ncompleto">Nome completo</label>
+            <input type="text" id="ncompleto" placeholder="Digite seu nome..."/>
+            <br/><br/>
+            <label>Sexo:</label>
+            <input type="radio" name="Sexo" value="Feminino"/> Feminino
+            <input type="radio" name="Sexo" value="Masculino"/> Masculino
+            <br/><br/>
+            <label for="obs">Registre uma fofoca:</label>
+            <br/>
+            <textarea id="meuTextarea" rows="5" cols="30" maxlength="50"></textarea>
+            <p id="contador"></p>
+            <br/><br/>
+            <p>A senha deve contar 8 dígitos e ao menos 1 caractere especial</p>
+            <div id="passwordRules">
+                <ul>
+                    <li id="rule1" class="rule">Pelo menos 8 caracteres</li>
+                    <li id="rule2" class="rule">Pelo menos uma letra maiúscula</li>
+                    <li id="rule3" class="rule">Pelo menos uma letra minúscula</li>
+                    <li id="rule4" class="rule">Pelo menos um número</li>
+                    <li id="rule5" class="rule">Pelo menos um caractere especial</li>
+                </ul>
+            </div>
+            <br/><br/>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required minlength="8" pattern="^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]+$"/>
+            <br/><br/>
+            <label for="senhaRepetida">Confirme a senha:</label>
+            <input type="password" id="senhaRepetida" required/>
+            <span id="erroSenha"></span>
+            <br/><br/>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required/>
+            <br/><br/>
+            <label for="estado">Estado:</label>
+            <select id="estado" onchange="carregarCidades()">
+                <option value="">Selecione um estado</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espírito Santo</option>
+            </select>
+            <br/><br/>
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" disabled>
+                <option value="">Selecione um estado primeiro</option>
+            </select>
+            <br/><br/>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <button id="decreaseFont">Diminuir Fonte</button>
+        <button id="increaseFont">Aumentar Fonte</button>
+
+        <button id="toggleColorScheme">Alterar Esquema de Cores</button>
+
+
+    </main>
+
+    <br/>
+
+    <footer>
+        <h3>Contate-nos</h3>
+        <ul id="lista-rodape">
+            <li class="li-rodape">e-mail: xxxxxxx@gmail.com</li> 
+            <li class="li-rodape">telefone: 9999 9999</li> 
+            <li class="li-rodape">celular: (99) 9 9999 9999</li>
+        </ul>
+    </footer>
+
+            
+    <script src="programas.js">
+    </script>
+    
+</body>
+</html>
